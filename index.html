@@ -6,29 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome - Landing Page!!</title>
 
-  <!-- ============================================================
-    CSP TEST — Added for security testing Issue 2
-    Tests that the widget works WITHOUT unsafe-inline styles
-    and that SignalR connects over WSS without CSP violations.
-
-    REMOVE THIS TAG after testing is complete.
-  ============================================================ -->
-  <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src 'self' https://unpkg.com https://dev.chat.hilalsoftware.tools;
-      style-src 'self' 'unsafe-inline' https://dev.chat.hilalsoftware.tools;
-      connect-src 'self' https://dev.chat.hilalsoftware.tools wss://dev.chat.hilalsoftware.tools;
-      img-src 'self' data: https://dev.chat.hilalsoftware.tools;
-      font-src 'self' https://dev.chat.hilalsoftware.tools;
-    " />
-  <!-- ============================================================
-    NOTE: 'unsafe-inline' is included in style-src above ONLY to
-    allow the existing page's own <style> block to work.
-    The widget itself must NOT rely on unsafe-inline —
-    any CSP violations from the widget will still show in Console.
-    Once the widget is confirmed clean, remove unsafe-inline too.
-  ============================================================ -->
-
   <style>
     * {
       margin: 0;
