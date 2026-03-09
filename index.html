@@ -5,6 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome - Landing Page!!</title>
+   <!--
+    CSP TEST — 'unsafe-inline' intentionally REMOVED from style-src
+    ✅ Widget renders styled + chat works = fix verified
+    ❌ Widget breaks or CSP errors in console = fix incomplete
+  -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src  'self' 'unsafe-inline' https://unpkg.com http://localhost:3000 https://dev.chat.hilalsoftware.tools;
+    style-src   'self';
+    connect-src 'self'
+                http://localhost:3000
+                https://dev1.api.chatbot.hilalsoftware.tools
+                wss://dev1.api.chatbot.hilalsoftware.tools
+                https://dev.chat.hilalsoftware.tools
+                wss://dev.chat.hilalsoftware.tools
+                https://*.service.signalr.net
+                wss://*.service.signalr.net;
+  ">
 
   <style>
     * {
@@ -373,9 +391,12 @@
   <!-- Widget embed -->
   <script src='https://unpkg.com/react@18/umd/react.production.min.js'></script>
   <script src='https://unpkg.com/react-dom@18/umd/react-dom.production.min.js'></script>
-  <script src='https://dev.chat.hilalsoftware.tools/chat_v3.js' data-org-id='62becb2f-6011-487f-93cc-6c163c4c85d2'
+  <script
+    src='https://dev.chat.hilalsoftware.tools/chat_v3.js'
+    data-org-id='62becb2f-6011-487f-93cc-6c163c4c85d2'
     data-bot-id='d973f8cf-c156-4593-beec-79f6bc016333'
-    data-deployment-token='T3NBqpSLmMl6VokrH1eTachx1a8yW8T8H06RIJ2U7g3e8d90Qn126TTYgUGV77Lj'></script>
+    data-deployment-token='dN9PB9aLvU-6VbWGgRKQcTocar40f_zh6u237ArrCtJiOrhJP8yS7E-_W8ki0IdB'
+  ></script>
 </body>
 
 </html>
