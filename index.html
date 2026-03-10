@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self' https://unpkg.com *.hilalsoftware.tools;
-    style-src 'self' *.hilalsoftware.tools;
-    connect-src 'self' blob: *.hilalsoftware.tools wss://*.hilalsoftware.tools https://*.service.signalr.net wss://*.service.signalr.net;
-    img-src 'self' data: blob: *.hilalsoftware.tools;
-    media-src 'self' blob: *.hilalsoftware.tools;
-    font-src 'self' data: *.hilalsoftware.tools;
+    script-src 'self' https://unpkg.com https://dev.chat.hilalsoftware.tools;
+    style-src 'self' 'unsafe-inline' https://dev.chat.hilalsoftware.tools https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    connect-src 'self' https://dev1.api.chatbot.hilalsoftware.tools https://signalr-hilal-poc.service.signalr.net wss://signalr-hilal-poc.service.signalr.net;
+    img-src 'self' data: https:;
+    frame-src 'none';
   ">
 
   <title>Welcome - Landing Page!!</title>
@@ -94,8 +93,6 @@
 
   <script src="landing-page.js"></script>
 
-
-  <!-- Put the script tag here at the end of the body -->
   <script src='https://unpkg.com/react@18/umd/react.production.min.js'></script>
   <script src='https://unpkg.com/react-dom@18/umd/react-dom.production.min.js'></script>
   <script
