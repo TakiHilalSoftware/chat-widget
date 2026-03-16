@@ -4,6 +4,15 @@
 <head>
   
 <meta charset="UTF-8">
+ <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://unpkg.com http://localhost:3000 *.hilalsoftware.tools;
+    style-src 'self' http://localhost:3000 *.hilalsoftware.tools;
+    connect-src 'self' blob: http://localhost:3000 ws://localhost:3000 https://dev1.api.chatbot.hilalsoftware.tools wss://dev1.api.chatbot.hilalsoftware.tools *.hilalsoftware.tools wss://*.hilalsoftware.tools https://*.service.signalr.net wss://*.service.signalr.net;
+    img-src 'self' data: blob: *.hilalsoftware.tools;
+    media-src 'self' blob: *.hilalsoftware.tools;
+    font-src 'self' data: *.hilalsoftware.tools;
+  ">
 
   <title>Welcome - Landing Page!!</title>
   <link rel="stylesheet" href="landing-page.css" />
@@ -88,13 +97,13 @@
 
 
   <!-- Put the script tag here at the end of the body -->
-  <script src='https://unpkg.com/react@18/umd/react.production.min.js'></script>
+   <script src='https://unpkg.com/react@18/umd/react.production.min.js'></script>
   <script src='https://unpkg.com/react-dom@18/umd/react-dom.production.min.js'></script>
   <script
-    src='https://chat.hilalsoftware.tools/chat_v3.js'
-    data-org-id='9ff08127-9c3d-42c0-8057-4e8b05c2ede1'
-    data-bot-id='9593b0e8-f154-478b-85de-789cb0bbfc1d'
-    data-deployment-token='5ubx7bwRsVjMraYRkzqAX13aN-iZcYgWTRG9rJ93rjGNJtausJ167LpN1F_4yOQq'
+    src='https://dev.chat.hilalsoftware.tools/chat_v3.js'
+    data-org-id='62becb2f-6011-487f-93cc-6c163c4c85d2'
+    data-bot-id='d973f8cf-c156-4593-beec-79f6bc016333'
+    data-deployment-token='dN9PB9aLvU-6VbWGgRKQcTocar40f_zh6u237ArrCtJiOrhJP8yS7E-_W8ki0IdB'
   ></script>
 
 </body>
